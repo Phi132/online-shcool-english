@@ -1,0 +1,148 @@
+{
+    "header": {
+        "consultant": "Tư Vấn",
+        "describe-consultant": "Tư vấn trực tuyến từ xa",
+        "courses": "Khóa Học",
+        "describe-courses": "Các khóa học phổ biết",
+        "healthfacilities": "Cơ sở y tế",
+        "choose": "Chọn bệnh viện phòng khám",
+        "doctor": "Bác Sĩ",
+        "facilities": "Cơ Sở",
+        "des-facilities": "Cơ sở vật chất hiện đại",
+        "teacher": "Giảng Viên",
+        "des-teacher": "Giảng viên nổi bật",
+        "login": "Đăng Nhập",
+        "signup": "Đăng Ký",
+        "chooseGudDoc": "Chọn Bác Sĩ giỏi",
+        "package": "Gói Khám",
+        "check": "Khám sức khỏe tổng quát",
+        "support": "Hỗ Trợ",
+        "title1": "HỌC  TIẾNG ANH",
+        "title2": "TIẾNG ANH LÀ CHÂU BÁO",
+        "title411": "Khám",
+        "title412": "chuyên khoa",
+        "title421": "Khám",
+        "title422": "từ xa",
+        "title431": "Khám",
+        "title432": "tổng quát",
+        "title441": "Xét nghiệm",
+        "title442": "y học",
+        "title451": "Khám",
+        "title452": "nha khoa",
+        "title461": "Sức khỏe",
+        "title462": "tinh thần",
+        "doctorOptions": {
+            "adjust": "Chỉnh Sửa Thông Tin Bác Sĩ",
+            "chooseDr": "Chọn Bác Sĩ",
+            "info": "Thông Tin Giởi Thiệu",
+            "update": "Cập Nhật Thông Tin",
+            "chooseSpecialty": "Chọn Chuyên Khoa Khám",
+            "chooseClinic": "Chọn Phòng Khám"
+        },
+        "banner": {
+            "ourCourses": "Khóa học của chúng tôi",
+            "QualityOurCourses": "Được đào tạo chuyên nghiệp và chất lượng",
+            "readMore": "Xem Thêm",
+            "seeAllOurCourse": "Xem tất cả khóa học"
+        }
+    },
+    "loginHeader": {
+        "welcome": "Xin Chào"
+    },
+    "menu": {
+        "system": {
+            "header": "Ngưới Dùng",
+            "system-administrator": {
+                "header": "Quản trị hệ thống",
+                "user-manage": "Quản lý người sử dụng",
+                "product-manage": "Quản lý gói",
+                "register-package-group-or-account": "Đăng ký tài khoản bằng redux",
+                "manager-doctor": "Quản Lý Thông Tin Bác Sĩ",
+                "appointment": "Appointment",
+                "medical-specailty": "Tạo Chuyên Ngành Khám Bệnh",
+                "consultation": "Tạo Tư Vấn Từ Xa",
+                "manage-profile-consultant": "Quản Lí Hồ Sơ Tư Vấn"
+            },
+            "system-parameter": {
+                "header": "Tham số hệ thống"
+            },
+            "headerTitle2": "Phòng Khám",
+            "headerTitle3": "Chuyên Khoa",
+            "headerTitle4": "Cẩm Nang",
+            "headerTitle5": "Lịch Khám"
+        }
+    },
+    "container": {
+        "consultant": "Tư Vấn",
+        "remoteConsultant": "Tư Vấn Từ Xa",
+        "nameCourses": "Khóa Học",
+        "popularCourse": "Các Khóa Học Phổ Biền",
+        "Infrastructure": "Hạ Tầng",
+        "trainingFacilites": "Cơ sở đào tạo nổi bật",
+        "lecturer": "Giảng Viên",
+        "outstandingLecturers": "Giảng Viên Nổi Bật"
+    },
+    "schedules": {
+        "header": "Lịch Trình Bác Sĩ",
+        "chooseDate": "Chọn Ngày Khám",
+        "noAppointment": "Không có lịch hẹn ngày này"
+    },
+    "gender": "Giới Tính",
+    "position": "Chức Vụ",
+    "role": "Vai Trò",
+    "crudBtn": {
+        "save": "Lưu",
+        "submit": "Tạo"
+    },
+    "doctor-outstanding": {
+        "schedules": "Lịch hẹn",
+        "choose": "Chọn",
+        "book": "và Đặt (miễn phí)",
+        "curriculumVitae": "Hồ Sơ",
+        "Makeanappointment": "Đăng kí lịch hẹn",
+        "desMakeAnAppointment": "Đặt lịch với chúng tối để có thể giúp tiết kiệm và quản lí được thời gian quí bảo của bạn"
+    },
+    "main-title-admin": {
+        "specialty": {
+            "titleSpecialty": "Tạo Chuyên Khoa",
+            "consultation": "Tạo Tư Vấn Từ Xa",
+            "profileConsultation": {
+                "title": "Quản Lí Hồ Sơ Tư Vấn Từ Xa",
+                "chooseProfile": "Chọn Hồ Sơ",
+                "infoIntro": "Thông Tin Giới Thiệu",
+                "chooseConsultant": "Chọn Mục Tư Vấn",
+                "chooseClinic": "Chọn Phòng Khám",
+                "UpdateInfo": "Cập Nhật Thông Tin"
+            }
+        }
+    },
+    "main-content-admin": {
+        "medical-specialty": {
+            "name": "Tên Chuyên Khoa",
+            "image": "Hinh Mô Tả",
+            "uploadImg": "Tải Ảnh",
+            "ckEditor": "Thông Tin Chuyên Khoa"
+        },
+        "consultant": {
+            "name": "Tên Mục Tư Vấn",
+            "image": "Hinh Mô Tả",
+            "uploadImg": "Tải Ảnh",
+            "ckEditor": "Thông Tin Tư Vấn"
+        }
+    },
+    "see-more": {
+        "open": "Đọc Thêm",
+        "hidden": "Ẩn Đi"
+    },
+    "turnOffCamera": "Camera đã bị tắt",
+    "call": {
+        "calling": "đang gọi đến",
+        "accepte": "Nghe máy"
+    },
+    "status": {
+        "active": "Đang hoạt động",
+        "closed": "Đã đóng",
+        "maintenance": "Bảo Trì"
+    },
+    "consultantOffline": "Tư vấn viên này không trực tuyến"
+}

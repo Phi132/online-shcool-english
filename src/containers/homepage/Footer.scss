@@ -1,0 +1,68 @@
+.footer-area {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    .container-footer {
+        .container-main {
+            background-color: #0080c0;
+            .container-main-row {
+                .main-footer-left {
+                    .title-main-footer-1 {
+                        position: relative;
+                        color: #fff;
+                        padding-bottom: 25px;
+                        margin-bottom: 20px;
+                        font-size: 1.1875rem;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        letter-spacing: 0;
+                        &::after {
+                            border-bottom: 2px solid;
+                            border-color: #e6495e;
+                            bottom: 0;
+                            content: "";
+                            left: 0;
+                            position: absolute;
+                            width: 40px;
+                        }
+                    }
+                    p {
+                        font-family: Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
+                        line-height: 26px;
+                        color: #c4deff;
+                        font-size: 16px;
+                    }
+                    .footer-icon {
+                        display: flex;
+                        div {
+                            margin: 0 10px;
+                            padding: 10px;
+                            background-color: white;
+                            border-radius: 12px;
+                            i {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                    .footer-contact {
+                        color: #c4deff;
+                        margin-left: 1.65em;
+                    }
+                    .opening {
+                        color: #c4deff;
+                        -webkit-font-smoothing: antialiased;
+                        ul {
+                            list-style: none;
+                            li {
+                                width: 70%;
+                                display: flex;
+                                justify-content: space-between;
+                                padding: 8px 0;
+                                border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
