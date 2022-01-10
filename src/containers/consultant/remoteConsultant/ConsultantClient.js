@@ -23,7 +23,9 @@ import Peer from 'simple-peer';
 import PhoneRinging from '../../../assets/audio/PhoneRinging.mp3';
 
 // const socket = io(process.env.REACT_APP_BACKEND_URL);
-const socket = io('https://booking-doctor-first-server.herokuapp.com');
+const socket = io(process.env.REACT_APP_BACKEND_URL);
+
+// const socket = io('https://booking-doctor-first-server.herokuapp.com');
 
 class ConsultantClient extends Component {
 
