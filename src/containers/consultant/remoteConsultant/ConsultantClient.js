@@ -22,10 +22,10 @@ import Peer from 'simple-peer';
 
 import PhoneRinging from '../../../assets/audio/PhoneRinging.mp3';
 
-// const socket = io(process.env.REACT_APP_BACKEND_URL);
+
 const socket = io(process.env.REACT_APP_BACKEND_URL);
 
-// const socket = io('https://booking-doctor-first-server.herokuapp.com');
+// const socket = io('http://localhost:8182');
 
 class ConsultantClient extends Component {
 
@@ -381,7 +381,6 @@ class ConsultantClient extends Component {
 
         } = this.state;
 
-        console.log("dang goi dien ", isCalling);
         if (isCalling) {
             this.state.audio.play();
             this.state.audio.loop = true;
@@ -499,7 +498,7 @@ class ConsultantClient extends Component {
                                     userByIdConsultant.map((value, index) => {
 
                                         return (
-                                            <div className="infomation-doctor" key={index}>
+                                            <div className="infomation-doctor" key={value.doctorId + 1000}>
                                                 <div className="infomation-doctor-right">
                                                     <ConsultantInfo
                                                         doctorId={value.doctorId}
@@ -513,10 +512,10 @@ class ConsultantClient extends Component {
 
                                                             if (e.idConsultant === value.doctorId) {
                                                                 return (
-                                                                    <div className='online-consultant'>
+                                                                    <div className='online-consultant' key={index}>
                                                                         <button className='call-consultant'
                                                                             // data-socketId={e.socketId}
-                                                                            key={index}
+                                                                            // 
                                                                             onClick={() => this.callUserStart(e.socketId)}
                                                                         >
                                                                             Gọi Điện
