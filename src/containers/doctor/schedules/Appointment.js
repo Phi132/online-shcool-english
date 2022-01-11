@@ -442,7 +442,7 @@ class Appointment extends Component {
                             <div className="modal-content">
                                 <div className="modal-header">
                                     <h5 className="modal-title" id="exampleModalLongTitle">
-                                        Đặt Lịch Khám Bệnh
+                                        <FormattedMessage id="appointment.makeAnAppointment" />
                                     </h5>
                                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
@@ -452,7 +452,9 @@ class Appointment extends Component {
                                     {/* <span>
                                         {JSON.stringify(orderDetail)}
                                     </span> */}
-                                    <div className="title-name">Họ Tên Bệnh Nhân</div>
+                                    <div className="title-name">
+                                        <FormattedMessage id="appointment.fullName" />
+                                    </div>
                                     <div className="name-customer">
                                         <input type="text"
                                             className="input-name-customer"
@@ -462,13 +464,21 @@ class Appointment extends Component {
                                     <div className="gender">
                                         <form>
                                             <input type="radio" id="gender_male" name="gender" value="M" />
-                                            <label htmlFor="gender_male" className="label-gender-1">Nam</label><br></br>
+                                            <label htmlFor="gender_male" className="label-gender-1">
+                                                <FormattedMessage id="appointment.male" />
+
+                                            </label><br></br>
                                             <input type="radio" id="gender_female" name="gender" value="F" />
-                                            <label htmlFor="gender_female" className="label-gender-2">Nữ</label><br></br>
+                                            <label htmlFor="gender_female" className="label-gender-2">
+                                                <FormattedMessage id="appointment.female" />
+
+                                            </label><br></br>
                                         </form>
 
                                     </div>
-                                    <div className="title-name">Số Điện Thoại</div>
+                                    <div className="title-name">
+                                        <FormattedMessage id="appointment.phone" />
+                                    </div>
                                     <div className="name-customer">
                                         <input type="text"
                                             className="input-name-customer"
@@ -476,7 +486,9 @@ class Appointment extends Component {
 
                                         />
                                     </div>
-                                    <div className="title-name">Email</div>
+                                    <div className="title-name">
+                                        <FormattedMessage id="appointment.email" />
+                                    </div>
                                     <div className="name-customer">
                                         <input type="text"
                                             className="input-name-customer"
@@ -485,14 +497,19 @@ class Appointment extends Component {
                                         />
                                     </div>
 
-                                    <div className="title-name">Ngày Sinh</div>
+                                    <div className="title-name">
+                                        <FormattedMessage id="appointment.birthday" />
+                                    </div>
                                     <div className="name-customer">
                                         <input type="text"
                                             className="input-name-customer"
                                             onChange={(e) => this.onChangeModalOrderAppointment(e, "birthday")}
                                         />
                                     </div>
-                                    <div className="title-name">Lý Do Khám</div>
+                                    <div className="title-name">
+                                        <FormattedMessage id="appointment.note" />
+
+                                    </div>
                                     <div className="name-customer">
                                         <input type="text"
                                             className="input-name-customer"

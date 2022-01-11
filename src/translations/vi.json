@@ -144,5 +144,15 @@
         "closed": "Đã đóng",
         "maintenance": "Bảo Trì"
     },
-    "consultantOffline": "Tư vấn viên này không trực tuyến"
+    "consultantOffline": "Tư vấn viên này không trực tuyến",
+    "appointment": {
+        "makeAnAppointment": "Đặt lịch hẹn",
+        "male":"Nam",
+        "female":"Nữ",
+        "fullName": "Họ và tên",
+        "phone": "Số diện thoại",
+        "email": "Email",
+        "birthday": "Ngày Sinh",
+        "note": "Ghi chú"
+    }
 }

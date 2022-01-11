@@ -146,5 +146,15 @@
         "closed": "Closed",
         "maintenance": "Maintenance"
     },
-    "consultantOffline": "This consultant is offline"
+    "consultantOffline": "This consultant is offline",
+    "appointment": {
+        "makeAnAppointment": "Make an appointment",
+        "male": "Male",
+        "female": "Female",
+        "fullName": "Full Name",
+        "phone": "Phone number",
+        "email": "Email",
+        "birthday": "Date of birth",
+        "note": "Note"
+    }
 }
