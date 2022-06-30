@@ -70,7 +70,7 @@ class SpecialtyInfo extends Component {
     render() {
         var { language } = this.props;
         var { infoDoctor, Ckeditor, data, idDocotrAppointment, position } = this.state
-        console.log(position);
+        
         return (
             <React.Fragment>
                 <div className="detail-doctor">

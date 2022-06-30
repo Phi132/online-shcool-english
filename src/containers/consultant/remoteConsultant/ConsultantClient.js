@@ -21,11 +21,12 @@ import { io } from "socket.io-client";
 import Peer from 'simple-peer';
 
 import PhoneRinging from '../../../assets/audio/PhoneRinging.mp3';
+import ScrollToBottom from 'react-scroll-to-bottom';
 
 
-const socket = io(process.env.REACT_APP_BACKEND_URL);
+// const socket = io(process.env.REACT_APP_BACKEND_URL);
 
-// const socket = io('http://localhost:8182');
+const socket = io('http://localhost:8182');
 
 class ConsultantClient extends Component {
 
@@ -41,7 +42,6 @@ class ConsultantClient extends Component {
         this.myVideo = React.createRef();
         this.urFriendVideo = React.createRef();
         this.connectionRef = React.createRef();
-        this.scrollText = React.createRef();
 
         this.state = {
             consultantId: this.props.match.params.id,
@@ -75,6 +75,7 @@ class ConsultantClient extends Component {
             callEnded: false,
 
             isCalling: false,
+            clickCalling: false,
 
             isOpenCamera: true,
             isOpenCameraCall: true,
@@ -89,6 +90,9 @@ class ConsultantClient extends Component {
             IdMicroAnswer: '',
 
             audio: new Audio(PhoneRinging),
+
+            chat: '',
+            messList: [],
         }
     }
 
@@ -228,6 +232,20 @@ class ConsultantClient extends Component {
 
         });
 
+        // chat
+        socket.on("RECEIVE_MESS", data => {
+            let oldMessList = this.state.messList;
+            oldMessList.push({
+                messContent: data.messContent,
+                myId: data.myId,
+                idYourFriend: data.idYourFriend,
+                time: data.time,
+            });
+            let newDataMess = oldMessList
+            this.setState({
+                messList: newDataMess,
+            });
+        })
 
     }
 
@@ -243,10 +261,7 @@ class ConsultantClient extends Component {
             })
         }
         if (prevState.callAccpeted !== this.state.callAccpeted) {
-            //scroll into view
-            if (this.scrollText && this.scrollText.current) {
-                this.scrollText.current.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-            }
+
 
         }
     }
@@ -280,8 +295,11 @@ class ConsultantClient extends Component {
 
     callUserStart = (id) => {
 
-        const { mySocketId, nameCaller, stream } = this.state
+        const { mySocketId, nameCaller, stream, clickCalling } = this.state
 
+        this.setState({
+            clickCalling: true,
+        })
 
         const peer = new Peer({ initiator: true, trickle: false, stream: stream });
         peer.on("signal", (data) => {
@@ -363,9 +381,45 @@ class ConsultantClient extends Component {
         })
     }
 
+
+
+    // chat
+    changeChat = (e) => {
+        this.setState({
+            chat: e.target.value,
+        });
+
+    }
+    handleSubmitMess = async (e) => {
+        e.preventDefault();
+        let timeMess = (new Date(Date.now()).getHours()) + ":" + ((new Date(Date.now()).getMinutes()) >= 10
+            ? (new Date(Date.now()).getMinutes())
+            : ("0" + new Date(Date.now()).getMinutes()));
+        let messData = {
+            messContent: this.state.chat,
+            myId: this.state.mySocketId,
+            idYourFriend: this.state.idYourFriend,
+            time: timeMess,
+        }
+        await socket.emit("messContent", messData);
+
+        let oldMessList = this.state.messList;
+        oldMessList.push({
+            messContent: messData.messContent,
+            myId: messData.myId,
+            idYourFriend: messData.idYourFriend,
+            time: messData.time,
+        });
+        let newDataMess = oldMessList
+
+        this.setState({
+            messList: newDataMess,
+            chat: '',
+        });
+    }
+
+
     render() {
-        // const { testImport } = this.context;
-        // this.props.patientInfo.firstName
 
         var { isSeeMore, heightTopContent, dataSpecialtyById, mySocketId,
             userByIdConsultant, consultantIdOnline, isConsultant, stream,
@@ -378,6 +432,8 @@ class ConsultantClient extends Component {
             isOpenCameraCall, isOpenCameraAnswer, IdCall, IdAnswer,
 
             isOpenMicroCall, isOpenMicroAnswer, IdMicroCall, IdMicroAnswer,
+
+            messList,
 
         } = this.state;
 
@@ -487,11 +543,7 @@ class ConsultantClient extends Component {
                         <div className="main-container">
                             <div className="container">
                                 <div className="select-location">
-                                    {/* <select className="selected">
-                                        <option value="A">Toàn Quốc</option>
-                                        <option value="B">Ha Noi</option>
-                                        <option value="C">TP Ho Chi Minh</option>
-                                    </select> */}
+
                                 </div>
                                 {
                                     userByIdConsultant && userByIdConsultant.length > 0 &&
@@ -513,18 +565,19 @@ class ConsultantClient extends Component {
                                                             if (e.idConsultant === value.doctorId) {
                                                                 return (
                                                                     <div className='online-consultant' key={index}>
-                                                                        <button className='call-consultant'
-                                                                            // data-socketId={e.socketId}
-                                                                            // 
-                                                                            onClick={() => this.callUserStart(e.socketId)}
-                                                                        >
-                                                                            Gọi Điện
-                                                                        </button>
+                                                                        {
+                                                                            this.state.clickCalling ? (
+                                                                                <h2 style={{ fontWeight: "600" }}>Đang gọi</h2>
+                                                                            ) : (
+                                                                                <button className='call-consultant'
+                                                                                    onClick={() => this.callUserStart(e.socketId)}
+                                                                                >
+                                                                                    Gọi điện
+                                                                                </button>
+                                                                            )
+                                                                        }
+
                                                                     </div>
-
-
-
-
                                                                 )
                                                             }
 
@@ -696,72 +749,79 @@ class ConsultantClient extends Component {
                                             </span>
                                         </div>
                                         <div className='chat-content' >
-                                            <div className='orther-text' >
-                                                <div className='orther-mess-avt'>
+                                            <ScrollToBottom className='scroll-text-bottom'>
+                                                {
+                                                    messList && messList.length > 0 && messList.map((value, index) => {
+                                                        if (value.myId === mySocketId) {
+                                                            return (
+                                                                <div className='my-text' key={index} >
+                                                                    <div className='my-text-container'>
+                                                                        <div className='my-mess-content'>
+                                                                            <div className='my-mess'>
+                                                                                {value.messContent}
+                                                                            </div>
+                                                                            <div className='time-my-mess'>
+                                                                                {value.time}
+                                                                            </div>
 
-                                                </div>
-                                                <div className='orther-mess-content'>
-                                                    Buddy you have to do three JS one. For .obj
-                                                    formata and other formats. That is awesome i
-                                                    saw gucci website that is realy awesome
-                                                </div>
+                                                                        </div>
 
-                                            </div>
-                                            <div className='my-text'>
-                                                <div className='my-text-container'>
-                                                    <div className='my-mess-content'>
-                                                        wow, i want to learn java for html like onclick
-                                                        and effects... plz someone suggest how to
-                                                    </div>
+                                                                        < div className='my-mess-avt'>
 
-                                                    < div className='my-mess-avt'>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            )
+                                                        } else {
+                                                            return (
+                                                                <div className='orther-text' key={index}
+                                                                >
+                                                                    <div className='orther-mess-avt'>
 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className='my-text'>
-                                                <div className='my-text-container'>
-                                                    <div className='my-mess-content'>
-                                                        wow, i want to learn java for html like onclick
-                                                        and effects... plz someone suggest how to
-                                                    </div>
+                                                                    </div>
+                                                                    <div className='orther-mess-content'>
+                                                                        <div className='content-mess'>
+                                                                            {value.messContent}
+                                                                        </div >
+                                                                        <div className='time-mess'>
+                                                                            {value.time}
+                                                                        </div>
 
-                                                    < div className='my-mess-avt'>
+                                                                    </div>
+                                                                </div>
+                                                            )
 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className='orther-text'>
-                                                <div className='orther-mess-avt'>
+                                                        }
 
-                                                </div>
-                                                <div className='orther-mess-content'>
-                                                    Buddy you have to do three JS one. For .obj
-                                                    formata and other formats. That is awesome i
-                                                    saw gucci website that is realy awesome
-                                                </div>
+                                                    })
+                                                }
 
-                                            </div>
-                                            <span className='end-mess-content' ref={this.scrollText}>
 
-                                            </span>
+
+                                            </ScrollToBottom>
                                         </div>
-                                        <div className='type-chat'>
-                                            <div className='input-mess-content'>
-                                                <input type='text' placeholder='Tính năng đang bảo trì' />
-                                                <div className='icon-send-mess'>
-                                                    <i className="fas fa-paper-plane"></i>
+                                        <form className='mess-form' onSubmit={(e) => this.handleSubmitMess(e)}>
+                                            <div className='type-chat'>
+                                                <div className='input-mess-content'>
+                                                    <input type='text' placeholder='......'
+                                                        onChange={this.changeChat}
+                                                        value={this.state.chat}
+                                                    />
+                                                    <button className='icon-send-mess' type='submit'>
+                                                        <i className="fas fa-paper-plane"></i>
+                                                    </button>
+
                                                 </div>
 
                                             </div>
+                                        </form>
 
-                                        </div>
                                     </div>
-                                ) :
+                                )
+                                :
                                 (
                                     ''
                                 )}
-
 
                         </div>
 
