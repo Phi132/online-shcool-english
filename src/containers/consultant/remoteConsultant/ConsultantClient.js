@@ -24,9 +24,9 @@ import PhoneRinging from '../../../assets/audio/PhoneRinging.mp3';
 import ScrollToBottom from 'react-scroll-to-bottom';
 
 
-// const socket = io(process.env.REACT_APP_BACKEND_URL);
+const socket = io(process.env.REACT_APP_BACKEND_URL);
 
-const socket = io('http://localhost:8182');
+// const socket = io('http://localhost:8182');
 
 class ConsultantClient extends Component {
 
