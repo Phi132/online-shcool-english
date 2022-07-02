@@ -13,6 +13,7 @@ import DoctorInfo from './doctorDetail/DoctorInfo';
 import LoadingOverlay from 'react-loading-overlay';
 import Loading from './schedules/Loading';
 import Footer from '../homepage/Footer';
+import HeaderSecondClient from '../Header/HeaderSecondClient';
 
 class DoctorDetail extends Component {
 
@@ -63,8 +64,7 @@ class DoctorDetail extends Component {
 
                 >
 
-                    <HeaderHome />
-                    <div className='space-top'></div>
+                    <HeaderSecondClient />
                     <div className="container-doctor-detail">
                         <DoctorInfo
                             idDocotrAppointment={idDocotrAppointment}

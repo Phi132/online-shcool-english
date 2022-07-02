@@ -873,18 +873,18 @@ class Container extends Component {
                                                     var imgSpecialtyData = Buffer.from(e.image, 'base64').toString('binary');
                                                 }
                                                 return (
-                                                    <div class="single-video" key={index}
+                                                    <div className="single-video" key={index}
                                                         onClick={() => this.changeDirectionToRemoteConsultant(e)}
                                                     >
-                                                        <div class="video-part">
-                                                            <img class="img-fluid img-consultant" src="https://www.studytienganh.vn/upload/2021/05/98707.jpg" />
-                                                            <div class="overlay"></div>
-                                                            <span class="popup-youtube play-btn">
-                                                                <img class="play-icon" src="https://preview.colorlib.com/theme/eclipse/img/xplay-btn.png.pagespeed.ic.0u0c3c4gC2.webp" />
+                                                        <div className="video-part">
+                                                            <img className="img-fluid img-consultant" src="https://www.studytienganh.vn/upload/2021/05/98707.jpg" />
+                                                            <div className="overlay"></div>
+                                                            <span className="popup-youtube play-btn">
+                                                                <img className="play-icon" src="https://preview.colorlib.com/theme/eclipse/img/xplay-btn.png.pagespeed.ic.0u0c3c4gC2.webp" />
                                                             </span>
                                                         </div>
-                                                        <h4 class="text-white name-consultant">{e.name}</h4>
-                                                        <p class="text-white des-content-consultant">
+                                                        <h4 className="text-white name-consultant">{e.name}</h4>
+                                                        <p className="text-white des-content-consultant">
                                                             <FormattedMessage id="consultant.title02" />
                                                         </p>
                                                     </div>
@@ -906,13 +906,13 @@ class Container extends Component {
 
                     <div className='description-LE'>
 
-                        <div class="bg-image bg-parallax overlay description-LE-img" ></div>
+                        <div className="bg-image bg-parallax overlay description-LE-img" ></div>
 
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h2 class="le-content1">Ceteros fuisset mei no, soleat epicurei adipiscing ne vis.</h2>
-                                    <p class="lead ">Ceteros fuisset mei no, soleat epicurei adipiscing ne vis. Et his suas veniam nominati.</p>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-md-6">
+                                    <h2 className="le-content1">Ceteros fuisset mei no, soleat epicurei adipiscing ne vis.</h2>
+                                    <p className="lead ">Ceteros fuisset mei no, soleat epicurei adipiscing ne vis. Et his suas veniam nominati.</p>
 
                                 </div>
                             </div>
@@ -997,9 +997,9 @@ class Container extends Component {
                             </div> */}
                         </>
                         <div className='container px-4'>
-                            <div class="row row-lect-out">
-                                <div class="col-md-8 text-center heading-section title-lect-out">
-                                    <h2 class="mb-4 lect-out-title">
+                            <div className="row row-lect-out">
+                                <div className="col-md-8 text-center heading-section title-lect-out">
+                                    <h2 className="mb-4 lect-out-title">
                                         <FormattedMessage id="container.lecturer" />
                                     </h2>
                                     <p>
@@ -1037,26 +1037,26 @@ class Container extends Component {
                                         }
 
                                         return (
-                                            <div class="staff" key={index}
+                                            <div className="staff" key={index}
                                                 onClick={() => this.onClickDoctorOutStanding(value)}
                                             >
-                                                <div class="img-wrap d-flex align-items-stretch cotain-img">
-                                                    <div class="img align-self-stretch img-staff "
+                                                <div className="img-wrap d-flex align-items-stretch cotain-img">
+                                                    <div className="img align-self-stretch img-staff "
                                                         style={{ backgroundImage: `url(${imageDoctor})` }}
                                                     ></div>
                                                 </div>
-                                                <div class="text pt-3 text-center">
+                                                <div className="text pt-3 text-center">
                                                     <h3 className='name-position'>
                                                         {
                                                             language === languages.VI ? nameVi : nameEn
                                                         }
                                                     </h3>
-                                                    <span class="position">
+                                                    <span className="position">
                                                         {
                                                             language === languages.VI ? positionVi : positionEn
                                                         }
                                                     </span>
-                                                    <div class="faded">
+                                                    <div className="faded">
                                                         <p>I am an ambitious workaholic,
                                                             but apart from that,
                                                             pretty simple person.</p>
@@ -1075,8 +1075,8 @@ class Container extends Component {
                     <div className="container-area-3" >
                         <div className='container'>
                             <div className='row'>
-                                <div class="col-lg-12">
-                                    <div class="section-title text-left">
+                                <div className="col-lg-12">
+                                    <div className="section-title text-left">
                                         <h2 className='feature-title'>
                                             <FormattedMessage id="feature.header01" /> <br />
                                             <FormattedMessage id="feature.header02" />
@@ -1088,9 +1088,9 @@ class Container extends Component {
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="other-feature-item">
-                                        <i class="fal fa-key-skeleton"></i>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="other-feature-item">
+                                        <i className="fal fa-key-skeleton"></i>
                                         <h4>
                                             <FormattedMessage id="feature.content01" />
                                         </h4>
@@ -1104,9 +1104,9 @@ class Container extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 mt--160">
-                                    <div class="other-feature-item">
-                                        <i class="far fa-file-alt"></i>
+                                <div className="col-lg-4 col-md-6 mt--160">
+                                    <div className="other-feature-item">
+                                        <i className="far fa-file-alt"></i>
                                         <h4>
                                             <FormattedMessage id="feature.content02" />
                                         </h4>
@@ -1120,9 +1120,9 @@ class Container extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 mt--260">
-                                    <div class="other-feature-item">
-                                        <i class="fal fa-medal"></i>
+                                <div className="col-lg-4 col-md-6 mt--260">
+                                    <div className="other-feature-item">
+                                        <i className="fal fa-medal"></i>
                                         <h4>
                                             <FormattedMessage id="feature.content03" />
                                         </h4>
@@ -1136,9 +1136,9 @@ class Container extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="other-feature-item">
-                                        <i class="fal fa-briefcase"></i>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="other-feature-item">
+                                        <i className="fal fa-briefcase"></i>
                                         <h4>
                                             <FormattedMessage id="feature.content04" />
                                         </h4>
@@ -1152,9 +1152,9 @@ class Container extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 mt--160">
-                                    <div class="other-feature-item">
-                                        <i class="fal fa-crown"></i>
+                                <div className="col-lg-4 col-md-6 mt--160">
+                                    <div className="other-feature-item">
+                                        <i className="fal fa-crown"></i>
                                         <h4>
                                             <FormattedMessage id="feature.content05" />
                                         </h4>
@@ -1168,9 +1168,9 @@ class Container extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 mt--260">
-                                    <div class="other-feature-item">
-                                        <i class="fal fa-headphones"></i>
+                                <div className="col-lg-4 col-md-6 mt--260">
+                                    <div className="other-feature-item">
+                                        <i className="fal fa-headphones"></i>
                                         <h4>
                                             <FormattedMessage id="feature.content06" />
                                         </h4>

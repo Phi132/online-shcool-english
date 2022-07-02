@@ -5,6 +5,7 @@ import { changeLanguageApp } from '../../store/actions';
 import * as actions from '../../store/actions';
 import HeaderHome from '../homepage/HeaderHome';
 import * as serveices from '../../services';
+import HeaderSecondClient from '../Header/HeaderSecondClient';
 
 class ConfirmAppointment extends Component {
 
@@ -30,7 +31,7 @@ class ConfirmAppointment extends Component {
         return (
             <React.Fragment>
 
-                <HeaderHome />
+                <HeaderSecondClient />
                 <div className="confirm-title">
                     <h1>
                         đã xác nhận thành công

@@ -246,9 +246,9 @@ class HeaderHome extends Component {
                 <div className='container-main-banner'>
                     <div className='main-banner'>
                         <div className='container'>
-                            <div class="row justify-content-center fullscreen align-items-center content-banner-1">
-                                <div class="col-lg-5 col-md-8 home-banner-left">
-                                    <h1 class="text-white text-banner-left">
+                            <div className="row justify-content-center fullscreen align-items-center content-banner-1">
+                                <div className="col-lg-5 col-md-8 home-banner-left">
+                                    <h1 className="text-white text-banner-left">
                                         <FormattedMessage
                                             id="header.bannerTitleA01"
                                         /> <br />
@@ -256,15 +256,15 @@ class HeaderHome extends Component {
                                             id="header.bannerTitleA02"
                                         />
                                     </h1>
-                                    <p class="mx-auto text-white  mt-20 mb-40">
+                                    <p className="mx-auto text-white  mt-20 mb-40">
                                         <FormattedMessage
                                             id="header.bannerTitleB01"
                                         />
                                     </p>
                                 </div>
 
-                                <div class="offset-lg-2 col-lg-5 col-md-12 home-banner-right">
-                                    <img class="img-fluid" src={bannerSub} alt="" />
+                                <div className="offset-lg-2 col-lg-5 col-md-12 home-banner-right">
+                                    <img className="img-fluid" src={bannerSub} alt="" />
                                 </div>
                             </div>
                         </div>
@@ -272,12 +272,12 @@ class HeaderHome extends Component {
                 </div>
 
                 <div className='feature-area'>
-                    <div class="container-fluid">
-                        <div class="feature-inner row">
-                            <div class="col-lg-2 col-md-6">
-                                <div class="feature-item d-flex">
-                                    <i class="fal fa-book-open"></i>
-                                    <div class="ml-20">
+                    <div className="container-fluid">
+                        <div className="feature-inner row">
+                            <div className="col-lg-2 col-md-6">
+                                <div className="feature-item d-flex">
+                                    <i className="fal fa-book-open"></i>
+                                    <div className="ml-20">
                                         <h4>
                                             <FormattedMessage
                                                 id="header.bannerTitleC01"
@@ -291,10 +291,10 @@ class HeaderHome extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-2 col-md-6">
-                                <div class="feature-item d-flex">
-                                    <i class="fal fa-trophy"></i>
-                                    <div class="ml-20">
+                            <div className="col-lg-2 col-md-6">
+                                <div className="feature-item d-flex">
+                                    <i className="fal fa-trophy"></i>
+                                    <div className="ml-20">
                                         <h4>
                                             <FormattedMessage
                                                 id="header.bannerTitleC02"
@@ -309,10 +309,10 @@ class HeaderHome extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-2 col-md-6">
-                                <div class="feature-item d-flex border-right-0">
-                                    <i class="fal fa-desktop-alt"></i>
-                                    <div class="ml-20">
+                            <div className="col-lg-2 col-md-6">
+                                <div className="feature-item d-flex border-right-0">
+                                    <i className="fal fa-desktop-alt"></i>
+                                    <div className="ml-20">
                                         <h4>
                                             <FormattedMessage
                                                 id="header.bannerTitleC03"

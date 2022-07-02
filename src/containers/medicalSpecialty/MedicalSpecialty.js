@@ -15,6 +15,7 @@ import SpecialtyInfo from './SpecialtyInfo';
 import Appointment from '../doctor/schedules/Appointment';
 import LoadingOverlay from 'react-loading-overlay';
 import Loading from '../doctor/schedules/Loading';
+import HeaderSecondClient from '../Header/HeaderSecondClient';
 
 
 
@@ -103,8 +104,7 @@ class MedicalSpecialty extends Component {
                     spinner={<Loading />}
 
                 >
-                    <HeaderHome />
-                    <div className='space-top'></div>
+                    <HeaderSecondClient />
                     {/* describe specialty */}
                     <div className="description-top" style={{ backgroundImage: `url('${imageSpecialtyURL}')` }}>
                         <div className="overlay">
@@ -160,7 +160,7 @@ class MedicalSpecialty extends Component {
                                             <div className="infomation-doctor-right">
                                                 <SpecialtyInfo
                                                     idDocotrAppointment={value.doctorId}
-                                                    // position={this.state.position}
+                                                // position={this.state.position}
                                                 // storeCkeditor={this.storeCkeditor}
                                                 />
                                             </div>
