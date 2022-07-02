@@ -107,6 +107,7 @@ class MedicalSpecialty extends Component {
                 >
                     <ScrollTop />
                     <HeaderSecondClient />
+                    
                     {/* describe specialty */}
                     <div className="description-top" style={{ backgroundImage: `url('${imageSpecialtyURL}')` }}>
                         <div className="overlay">
