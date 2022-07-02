@@ -7,7 +7,7 @@
         "healthfacilities": "Cơ sở y tế",
         "choose": "Chọn bệnh viện phòng khám",
         "doctor": "Bác Sĩ",
-        "facilities": "Cơ Sở",
+        "map": "Bản Đồ",
         "des-facilities": "Cơ sở vật chất hiện đại",
         "teacher": "Giảng Viên",
         "des-teacher": "Giảng viên nổi bật",
@@ -31,6 +31,13 @@
         "title452": "nha khoa",
         "title461": "Sức khỏe",
         "title462": "tinh thần",
+        "bannerTitleA01": "Thực hiện bước đầu",
+        "bannerTitleA02": "để học với chúng tôi",
+        "bannerTitleB01": "Trong lịch sử thiên văn học hiện đại, có lẽ không có ai bước tiến lớn hơn tòa nhà và ra mắt kính viễn vọng không gian được gọi là Hubble.",
+        "bannerTitleC01": "Lớp học mới",
+        "bannerTitleC02": "Các khóa học hàng đầu",
+        "bannerTitleC03": "Sách điện tử",
+        "bannerTitleC04": "Trong lịch sử thiên văn học hiện đại, có lẽ không có một bước nhảy vọt nào lớn hơn.",
         "doctorOptions": {
             "adjust": "Chỉnh Sửa Thông Tin Bác Sĩ",
             "chooseDr": "Chọn Bác Sĩ",
@@ -48,6 +55,26 @@
     },
     "loginHeader": {
         "welcome": "Xin Chào"
+    },
+    "course": {
+        "title01": "Các khóa học phổ biến",
+        "title02": "Có sẵn ngay bây giờ",
+        "reviews": "Truy cập"
+    },
+    "consultant": {
+        "title01": "Tư vấn và hỗ trợ",
+        "title011": "Trực tuyến",
+        "title02": "Bạn đã sẵn sàng để bắt đầu hành trình mới chưa nào? Nếu có gì thắc mắc thì đừng ngần ngại mà hãy liên hệ với chúng tôi"
+    },
+    "feature": {
+        "header01":"Các Tính Năng",
+        "header02":"Hữu ích cho mọi người",
+        "content01":"Truy Cập Trọn Đời",
+        "content02":"Nhiều Nguồn Tài Liệu",
+        "content03":"Thẻ Thành Viên",
+        "content04":"35000+ Khóa Học",
+        "content05":"Chuyên Gia Cố Vấn",
+        "content06":"Hỗ Trợ Trực Tuyến"
     },
     "menu": {
         "system": {
@@ -80,7 +107,7 @@
         "Infrastructure": "Hạ Tầng",
         "trainingFacilites": "Cơ sở đào tạo nổi bật",
         "lecturer": "Giảng Viên",
-        "outstandingLecturers": "Giảng Viên Nổi Bật"
+        "outstandingLecturers": "Danh sách các giảng nổi bật: Có kinh nghiệm trong số 1 về cuộc thi Olympic Tiếng Anh sinh viên toàn quốc lần thứ x"
     },
     "schedules": {
         "header": "Lịch Trình Bác Sĩ",
@@ -147,8 +174,8 @@
     "consultantOffline": "Tư vấn viên này không trực tuyến",
     "appointment": {
         "makeAnAppointment": "Đặt lịch hẹn",
-        "male":"Nam",
-        "female":"Nữ",
+        "male": "Nam",
+        "female": "Nữ",
         "fullName": "Họ và tên",
         "phone": "Số diện thoại",
         "email": "Email",

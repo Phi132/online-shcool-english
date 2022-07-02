@@ -4,6 +4,7 @@ import './Banner.scss';
 import { FormattedMessage } from 'react-intl';
 import { changeLanguageApp } from '../../store/actions';
 import { languages } from '../../utils/constant';
+import bannerSub from '../../assets/images/banner-sub-01.png';
 
 class HeaderHome extends Component {
 
@@ -42,7 +43,7 @@ class HeaderHome extends Component {
         var { banner1, banner2 } = this.state;
         return (
             <React.Fragment>
-                <div className='container-main-banner'>
+                {/* <div className='container-main-banner'>
                     <div className='main-banner'>
                         <div className="banner-area"
                             style={banner2 ? {
@@ -239,12 +240,97 @@ class HeaderHome extends Component {
 
                         </div>
                     </div>
+                </div> */}
+
+
+                <div className='container-main-banner'>
+                    <div className='main-banner'>
+                        <div className='container'>
+                            <div class="row justify-content-center fullscreen align-items-center content-banner-1">
+                                <div class="col-lg-5 col-md-8 home-banner-left">
+                                    <h1 class="text-white text-banner-left">
+                                        <FormattedMessage
+                                            id="header.bannerTitleA01"
+                                        /> <br />
+                                        <FormattedMessage
+                                            id="header.bannerTitleA02"
+                                        />
+                                    </h1>
+                                    <p class="mx-auto text-white  mt-20 mb-40">
+                                        <FormattedMessage
+                                            id="header.bannerTitleB01"
+                                        />
+                                    </p>
+                                </div>
+
+                                <div class="offset-lg-2 col-lg-5 col-md-12 home-banner-right">
+                                    <img class="img-fluid" src={bannerSub} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <div className='feature-area'>
+                    <div class="container-fluid">
+                        <div class="feature-inner row">
+                            <div class="col-lg-2 col-md-6">
+                                <div class="feature-item d-flex">
+                                    <i class="fal fa-book-open"></i>
+                                    <div class="ml-20">
+                                        <h4>
+                                            <FormattedMessage
+                                                id="header.bannerTitleC01"
+                                            />
+                                        </h4>
+                                        <p>
+                                            <FormattedMessage
+                                                id="header.bannerTitleC04"
+                                            />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <div class="feature-item d-flex">
+                                    <i class="fal fa-trophy"></i>
+                                    <div class="ml-20">
+                                        <h4>
+                                            <FormattedMessage
+                                                id="header.bannerTitleC02"
+                                            />
+                                        </h4>
+                                        <p>
+
+                                            <FormattedMessage
+                                                id="header.bannerTitleC04"
+                                            />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <div class="feature-item d-flex border-right-0">
+                                    <i class="fal fa-desktop-alt"></i>
+                                    <div class="ml-20">
+                                        <h4>
+                                            <FormattedMessage
+                                                id="header.bannerTitleC03"
+                                            />
+                                        </h4>
+                                        <p>
+                                            <FormattedMessage
+                                                id="header.bannerTitleC04"
+                                            />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
-
-
+                </div>
             </React.Fragment>
         )
     }

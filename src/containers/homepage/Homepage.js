@@ -7,6 +7,7 @@ import HeaderHome from './HeaderHome';
 import Banner from './Banner';
 import Container from './Container';
 import Footer from './Footer';
+import ScrollTop from './ScrollTop';
 
 class Homepage extends Component {
 
@@ -29,10 +30,7 @@ class Homepage extends Component {
             refItem4: ref4,
         })
     }
-    scrollHomePage = () => {
-        console.log("test scroll home page", this.homeRef.current.scrollTop);
-        alert();
-    }
+
 
     render() {
         var { refItem1, refItem2, refItem3, refItem4 } = this.state;
@@ -41,17 +39,16 @@ class Homepage extends Component {
             <>
                 <div className="home__page__container"
                     ref={this.homeRef}
-                    onScroll={this.scrollHomePage}
-                    style={{ "overflow": "hidden" }}
-                >
 
+                >
+                    <ScrollTop />
                     <HeaderHome
                         refItem1={refItem1}
                         refItem2={refItem2}
                         refItem3={refItem3}
                         refItem4={refItem4}
                     />
-                    <div className='space-top'></div>
+
                     <Banner
                         refItem2={refItem2}
                     />

@@ -10,7 +10,7 @@
         "choose": "Choose hospital clinic",
         "doctor": "Doctor",
         "chooseGudDoc": "Choose a good Doctor",
-        "facilities": "Modern Facilities",
+        "map": "Map",
         "des-facilities": "Many modern facilities",
         "teacher": "Lecturers",
         "des-teacher": "Outstanding Lecturers",
@@ -33,6 +33,13 @@
         "title452": "Examination",
         "title461": "Mental",
         "title462": "Health",
+        "bannerTitleA01": "Take the first step",
+        "bannerTitleA02": "to learn with us",
+        "bannerTitleB01": "In the history of modern astronomy, there is probably no one greater leap forward than the building and launch of the space telescope known as the Hubble.",
+        "bannerTitleC01": "New Classes",
+        "bannerTitleC02": "Top Courses",
+        "bannerTitleC03": "Full E-Books",
+        "bannerTitleC04": "In the history of modern astronomy, there is probably no one greater leap forward.",
         "doctorOptions": {
             "adjust": "adjust Infomation doctor",
             "chooseDr": "choose doctor",
@@ -50,6 +57,26 @@
     },
     "loginHeader": {
         "welcome": "Welcome"
+    },
+    "course": {
+        "title01": "Popular Courses",
+        "title02": "Available Right Now",
+        "reviews": "Online"
+    },
+    "consultant": {
+        "title01": "Consultant and Helper",
+        "title011": "Online",
+        "title02": "Please let us know if you have any questions. If we can be of assistance, please do not hesitate  to contact us."
+    },
+    "feature": {
+        "header01": "Features That",
+        "header02": "Can Avail By Everyone",
+        "content01": "Lifetime Access",
+        "content02": "Source File Included",
+        "content03": "Student Membership",
+        "content04": "35000+ Courses",
+        "content05": "Expert Mentors",
+        "content06": "Live Supports"
     },
     "menu": {
         "system": {

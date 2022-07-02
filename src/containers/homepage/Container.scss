@@ -1,358 +1,210 @@
+// tư vấn
 .container-area {
+    padding-bottom: 120px;
+    background: url("../../assets/images/banner02.png") no-repeat center;
+}
+
+.title-consultant {
+    font-size: 42px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.des-consultant {
+    margin: 0;
+    font-size: 14px;
+    max-width: 620px;
+}
+
+.single-video {
+    cursor: pointer;
+}
+.single-video:hover .name-consultant {
+    color: #ffdc5a !important;
+    transition: all 0.2s linear;
+}
+.video-part {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.video-left {
+    padding-bottom: 155px;
+}
+.img-consultant {
+    display: block;
     width: 100%;
-    background: url("../../assets/images/contain-bg-1.svg") right bottom no-repeat;
-    background-size: 120% !important;
-    background-color: #ecf8fe;
-    padding: 45px 96px 50px;
-    .container-title {
-        text-align: center;
-        .container-title1 {
-            font-size: 18px;
-            margin-bottom: 12px;
-            margin-top: 18px;
-            font-weight: 600;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #e6495e;
-        }
-        .container-title2 {
-            font-size: 32px;
-            font-weight: 600;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #3370bc;
-            text-transform: uppercase;
-        }
-    }
-    .slider-container {
-        .space-bot-top-slider {
-            font-family: "Ubuntu", Helvetica "Neue", Helvetica, Arial, sans-serif;
-            .slider-picture {
-                position: relative;
-                cursor: pointer;
-                .slider-content-1 {
-                    height: 372px;
-                    border-radius: 8px;
-                    overflow: hidden;
-                    position: relative;
-                    padding: 10px;
-                    margin: 0 12px 0 0;
-                    background-color: rgb(255, 255, 255);
-                    box-shadow: 0 0 14px -7px #000;
-                    .frame-slider-img {
-                        width: 260px;
-                        height: 145px;
-                        border-radius: 8px;
-                        overflow: hidden;
-                        .slider-img {
-                            padding-top: 56.25%;
-                            background-size: cover;
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            transition: all 0.3s linear;
+    -webkit-transform-style: preserve-3d;
+}
+.video-part .overlay {
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.play-icon {
+    width: auto !important;
+    margin: auto;
+}
+.video-part .popup-youtube {
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.name-consultant {
+    margin: 40px 0 20px;
+    font-size: 24px;
+    font-weight: 600;
+    transition: all 0.2s linear;
+}
+.des-content-consultant {
+    margin-bottom: 20px;
+}
+// end tư vấn
 
-                            &:hover {
-                                transform: scale(1.1, 1.2);
-                                transition: all 0.3s linear;
-                            }
-                        }
-                    }
-
-                    .slider-picture-title {
-                        margin-top: 10px;
-                        margin-bottom: 20px;
-                        padding-left: 5px;
-                        span {
-                            text-transform: uppercase;
-                            font-size: 17px;
-                            font-family: inherit;
-                            color: #04003a;
-                            width: 100%; // chiều rộng bằng khối bao nó
-                            height: 51px;
-                            white-space: pre-wrap;
-                            overflow: hidden; // ẩn các nội dung khi kích thước lớn hơn chiều rộng khối bên ngoài
-                            text-overflow: ellipsis; //thêm 3 dấu chấm ở cuối
-                            -webkit-line-clamp: 2; // số dòng muốn hiển thị
-                            -webkit-box-orient: vertical;
-                            display: -webkit-box;
-                            font-weight: 600;
-                        }
-                        .description-slider {
-                            margin-top: 8px;
-                            div {
-                                font-size: 14px;
-                                margin: 2px 0;
-
-                                i {
-                                    font-size: 17px;
-                                    width: 30px;
-                                }
-                            }
-                            .status-active {
-                                color: #009319;
-                                font-weight: 600;
-                                i {
-                                    color: black;
-                                }
-                            }
-                            .maintenance {
-                                color: rgb(245, 27, 27);
-                            }
-                        }
-                    }
-                    .read-option {
-                        width: 100%;
-                        padding-left: 5px;
-                        .read-more-btn {
-                            width: 100%;
-                            .read-more-btn-area {
-                                display: flex;
-                                width: 114px;
-                                padding: 8px 10px;
-                                margin: 10px 0;
-                                border-bottom: 1px solid #00a7a7;
-                                border-top: 1px solid #ff0000;
-                                // border-left: 2px solid #0ccc0c;
-                                // border-right: 2px solid #0ccc0c;
-
-                                transition: all 0.1s linear;
-                                border-radius: 10px;
-                                text-align: center;
-                                .arrow-icon-readmore {
-                                    height: 18px;
-                                    width: 16px;
-                                    overflow: hidden;
-                                    i {
-                                        font-size: 18px;
-                                        opacity: 0;
-                                        transform: translateX(-16px);
-                                        transition: all 0.3s linear;
-                                    }
-                                }
-                                .content-readmore-option {
-                                    color: #eb2b44;
-                                    transform: translateX(-4px);
-                                    transition: all 0.3s linear;
-                                }
-
-                                &:hover {
-                                    .arrow-icon-readmore {
-                                        i {
-                                            opacity: 1;
-                                            transform: translateX(0px);
-                                            transition: all 0.3s linear;
-                                        }
-                                    }
-                                    .content-readmore-option {
-                                        font-weight: 600;
-                                        color: #5c9eee;
-                                        transform: translateX(6px);
-                                        transition: all 0.3s linear;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            .slider-picture-maintenance {
-                .slider-content-1 {
-                    .frame-slider-img {
-                        width: 260px;
-                        height: 145px;
-                        border-radius: 8px;
-                        overflow: hidden;
-                        .slider-img {
-                            padding-top: 56.25%;
-                            background-image: url("../../assets/images/maintance.jpg");
-                            background-size: cover;
-                            background-position: center top;
-                            background-repeat: no-repeat;
-                            transition: all 0.3s linear;
-
-                            &:hover {
-                                transform: scale(1.1, 1.2);
-                                transition: all 0.3s linear;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+// khóa học
+.section-title {
+    padding-bottom: 75px;
+}
+.title-course {
+    font-size: 42px;
+    font-weight: 600;
+    color: #222;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.detail-title-course {
+    margin-bottom: 0;
+    max-width: 620px;
+    color: #828bb2;
 }
 .container-area-2 {
     width: 100%;
-    padding: 45px 96px 50px;
-    background-color: #ecf8fe;
+    padding: 45px 96px 120px;
+    background-color: #ffffff;
     position: relative;
+}
+.content-courses {
+    font-family: "Ubuntu", Helvetica "Neue", Helvetica, Arial, sans-serif;
+}
+.slider-picture-maintenance {
+    .slider-content-1 {
+        .frame-slider-img {
+            width: 260px;
+            height: 145px;
+            border-radius: 8px;
+            overflow: hidden;
+            .slider-img {
+                padding-top: 56.25%;
+                background-image: url("../../assets/images/maintenance-course.jpg");
+                background-size: contain;
+                background-position: center top;
+                background-repeat: no-repeat;
+                transition: all 0.3s linear;
 
-    .container-title {
-        text-align: center;
-        .container-title1 {
-            font-size: 18px;
-            margin-bottom: 12px;
-            margin-top: 18px;
-            font-weight: 600;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #e6495e;
-        }
-        .container-title2 {
-            font-size: 32px;
-            font-weight: 600;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #3370bc;
-            text-transform: uppercase;
+                &:hover {
+                    transform: scale(1.1, 1.2);
+                    transition: all 0.3s linear;
+                }
+            }
         }
     }
-    .slider-container {
-        .space-bot-top-slider {
-            font-family: "Ubuntu", Helvetica "Neue", Helvetica, Arial, sans-serif;
-            .slider-picture {
-                position: relative;
-                cursor: pointer;
-                .slider-content-1 {
-                    height: 372px;
-                    border-radius: 8px;
-                    overflow: hidden;
-                    position: relative;
-                    padding: 10px;
-                    margin: 0 12px 0 0;
-                    background-color: rgb(255, 255, 255);
-                    box-shadow: 0 0 14px -7px #101010;
-                    .frame-slider-img {
-                        width: 260px;
-                        height: 145px;
-                        border-radius: 8px;
-                        overflow: hidden;
-                        .slider-img {
-                            padding-top: 56.25%;
-                            background-size: cover;
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            transition: all 0.3s linear;
+}
+.slider-picture {
+    position: relative;
+    cursor: pointer;
+    .slider-content-1 {
+        // height: 372px;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        padding: 0;
+        margin: 0 12px 0 0;
+        background-color: #f9f9fb;
+        box-shadow: 0 0 14px -7px #101010;
 
-                            &:hover {
-                                transform: scale(1.1, 1.2);
+        .slider-picture-title {
+            padding: 30px 30px;
+            .description-slider {
+                margin-top: 8px;
+                div {
+                    font-size: 14px;
+                    margin: 2px 0;
+
+                    i {
+                        font-size: 17px;
+                        width: 30px;
+                    }
+                }
+                .status-active {
+                    color: #009319;
+                    font-weight: 600;
+                    i {
+                        color: black;
+                    }
+                }
+                .maintenance {
+                    color: rgb(245, 27, 27);
+                }
+            }
+        }
+        .read-option {
+            width: 100%;
+            padding-left: 5px;
+            .read-more-btn {
+                width: 100%;
+                .read-more-btn-area {
+                    display: flex;
+                    width: 114px;
+                    padding: 8px 10px;
+                    margin: 10px 0;
+                    border-bottom: 1px solid #00a7a7;
+                    border-top: 1px solid #ff0000;
+                    // border-left: 2px solid #0ccc0c;
+                    // border-right: 2px solid #0ccc0c;
+
+                    transition: all 0.1s linear;
+                    border-radius: 10px;
+                    text-align: center;
+                    .arrow-icon-readmore {
+                        height: 18px;
+                        width: 16px;
+                        overflow: hidden;
+                        i {
+                            font-size: 18px;
+                            opacity: 0;
+                            transform: translateX(-16px);
+                            transition: all 0.3s linear;
+                        }
+                    }
+                    .content-readmore-option {
+                        color: #eb2b44;
+                        transform: translateX(-4px);
+                        transition: all 0.3s linear;
+                    }
+
+                    &:hover {
+                        .arrow-icon-readmore {
+                            i {
+                                opacity: 1;
+                                transform: translateX(0px);
                                 transition: all 0.3s linear;
                             }
                         }
-                    }
-
-                    .slider-picture-title {
-                        margin-top: 10px;
-                        margin-bottom: 20px;
-                        padding-left: 5px;
-                        span {
-                            text-transform: uppercase;
-                            font-size: 17px;
-                            font-family: inherit;
-                            color: #04003a;
-                            width: 100%; // chiều rộng bằng khối bao nó
-                            height: 51px;
-                            white-space: pre-wrap;
-                            overflow: hidden; // ẩn các nội dung khi kích thước lớn hơn chiều rộng khối bên ngoài
-                            text-overflow: ellipsis; //thêm 3 dấu chấm ở cuối
-                            -webkit-line-clamp: 2; // số dòng muốn hiển thị
-                            -webkit-box-orient: vertical;
-                            display: -webkit-box;
+                        .content-readmore-option {
                             font-weight: 600;
-                        }
-                        .description-slider {
-                            margin-top: 8px;
-                            div {
-                                font-size: 14px;
-                                margin: 2px 0;
-
-                                i {
-                                    font-size: 17px;
-                                    width: 30px;
-                                }
-                            }
-                            .status-active {
-                                color: #009319;
-                                font-weight: 600;
-                                i {
-                                    color: black;
-                                }
-                            }
-                            .maintenance {
-                                color: rgb(245, 27, 27);
-                            }
-                        }
-                    }
-                    .read-option {
-                        width: 100%;
-                        padding-left: 5px;
-                        .read-more-btn {
-                            width: 100%;
-                            .read-more-btn-area {
-                                display: flex;
-                                width: 114px;
-                                padding: 8px 10px;
-                                margin: 10px 0;
-                                border-bottom: 1px solid #00a7a7;
-                                border-top: 1px solid #ff0000;
-                                // border-left: 2px solid #0ccc0c;
-                                // border-right: 2px solid #0ccc0c;
-
-                                transition: all 0.1s linear;
-                                border-radius: 10px;
-                                text-align: center;
-                                .arrow-icon-readmore {
-                                    height: 18px;
-                                    width: 16px;
-                                    overflow: hidden;
-                                    i {
-                                        font-size: 18px;
-                                        opacity: 0;
-                                        transform: translateX(-16px);
-                                        transition: all 0.3s linear;
-                                    }
-                                }
-                                .content-readmore-option {
-                                    color: #eb2b44;
-                                    transform: translateX(-4px);
-                                    transition: all 0.3s linear;
-                                }
-
-                                &:hover {
-                                    .arrow-icon-readmore {
-                                        i {
-                                            opacity: 1;
-                                            transform: translateX(0px);
-                                            transition: all 0.3s linear;
-                                        }
-                                    }
-                                    .content-readmore-option {
-                                        font-weight: 600;
-                                        color: #5c9eee;
-                                        transform: translateX(6px);
-                                        transition: all 0.3s linear;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            .slider-picture-maintenance {
-                .slider-content-1 {
-                    .frame-slider-img {
-                        width: 260px;
-                        height: 145px;
-                        border-radius: 8px;
-                        overflow: hidden;
-                        .slider-img {
-                            padding-top: 56.25%;
-                            background-image: url("../../assets/images/maintenance-course.jpg");
-                            background-size: contain;
-                            background-position: center top;
-                            background-repeat: no-repeat;
+                            color: #5c9eee;
+                            transform: translateX(6px);
                             transition: all 0.3s linear;
-
-                            &:hover {
-                                transform: scale(1.1, 1.2);
-                                transition: all 0.3s linear;
-                            }
                         }
                     }
                 }
@@ -360,240 +212,175 @@
         }
     }
 }
+.name-pro {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+}
+.value-course {
+    color: #222;
+    font-weight: 700;
+}
+.name-course {
+    line-height: 27px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
 
-.description-LE {
-    width: 100vw;
-    border-top: 1px solid gainsboro;
-    border-bottom: 1px solid rgb(104, 183, 236);
+    white-space: pre-wrap;
+    overflow: hidden; // ẩn các nội dung khi kích thước lớn hơn chiều rộng khối bên ngoài
+    text-overflow: ellipsis; //thêm 3 dấu chấm ở cuối
+    -webkit-line-clamp: 2; // số dòng muốn hiển thị
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    transition: all 0.3s ease 0s;
+}
+.slider-content-1:hover .name-course {
+    color: #7c32ff;
+}
+.rate-course {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.number-rate {
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+.list {
+    display: flex;
+    align-items: center;
+}
+.list li i {
+    color: #ebb35e;
+}
+.frame-slider-img {
+    border-radius: 8px;
+    overflow: hidden;
+    .slider-img {
+        padding-top: 70%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all 0.3s linear;
 
-    .description-LE-main {
-        display: flex;
-        width: 100%;
-        .description-LE-left {
-            width: 50%;
-            height: 467px;
-            background-image: url("../../assets/images/BLOG-LEARN-ENGLISH.jpg");
-            background-size: cover;
-            background-position: center;
-        }
-        .description-LE-right {
-            width: 50%;
-            height: 467px;
-            padding: 50px 100px;
-            .description-LE-right-title-1 {
-                font-size: 18px;
-                margin-bottom: 12px;
-                margin-top: 18px;
-                font-weight: 600;
-                font-family: Arial, Helvetica, sans-serif;
-                color: #e6495e;
-            }
-            .description-LE-right-title-2 {
-                font-size: 24px;
-                font-weight: 600;
-                font-family: Arial, Helvetica, sans-serif;
-                color: #3370bc;
-                text-transform: uppercase;
-            }
-            .description-LE-right-underline {
-                height: 2px;
-                width: 50px;
-                background-color: #e6495e;
-                border-radius: 999px;
-                margin: 20px 0;
-            }
-            .description-LE-right-title-3 {
-                font-size: 18px;
-
-                font-family: Arial, Helvetica, sans-serif;
-                color: #3d3c3c;
-            }
+        &:hover {
+            transform: scale(1.1, 1.2);
+            transition: all 0.3s linear;
         }
     }
 }
+// end khóa học
+
+// giới thieu
+.description-LE {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.description-LE-img {
+    background-image: url("../../../src/assets/images/description-LE.png");
+}
+.bg-image.bg-parallax {
+    background-attachment: fixed;
+}
+.bg-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-position: center;
+    background-size: cover;
+}
+.bg-image.overlay:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#374050), to(#798696));
+    background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
+    opacity: 0.7;
+}
+.le-content1 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 15px;
+}
+.lead {
+    color: #e9edfc;
+
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+// end gioi thieu
+
+// tính năng
 .container-area-3 {
     width: 100%;
-    padding: 45px 96px 50px;
-    background: url("../../assets/images/container-bg-3.svg") center bottom no-repeat;
-    background-color: #ecf8fe;
-
-    .container-title-3 {
-        text-align: center;
-        margin-top: 35px;
-        .container-title1-3 {
-            font-size: 18px;
-            margin-bottom: 12px;
-            margin-top: 18px;
-            font-weight: 600;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #e6495e;
-        }
-        .container-title2-3 {
-            font-size: 32px;
-            font-weight: 600;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #3370bc;
-            text-transform: uppercase;
-        }
-        .under-line {
-            width: 70px;
-            height: 2px;
-            border-bottom: 2px solid #eb2b44;
-            margin: 10px auto 50px;
-            border-radius: 999px;
-        }
-    }
-    .slider-container {
-        .space-bot-top-slider {
-            font-family: "Ubuntu", Helvetica "Neue", Helvetica, Arial, sans-serif;
-            .slider-picture {
-                position: relative;
-                cursor: pointer;
-                .slider-img {
-                    background: center no-repeat;
-                    background-size: cover;
-                    padding-top: 56.25%;
-                    margin: 0 6px;
-                }
-
-                .slider-picture-title {
-                    margin-top: 5px;
-                    span {
-                        font-size: 18px;
-                    }
-                }
-            }
-            // outstanding factory
-            .slider-picture--factory {
-                cursor: pointer;
-                .slider-content--factory {
-                    // min-height: 382px;
-                    border-radius: 8px;
-                    overflow: hidden;
-                    position: relative;
-                    padding: 10px;
-                    margin: 0 12px 0 0;
-                    background-color: rgb(253, 252, 252);
-                    box-shadow: 0 0 14px -7px #101010;
-                    .frame-slider-img {
-                        width: 260px;
-                        height: 145px;
-                        border-radius: 8px;
-                        overflow: hidden;
-                        .slider-img--factory {
-                            background: url("../../assets/images/building.jpg");
-                            padding-top: 56.25%;
-                            background-size: cover;
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            transition: all 0.3s linear;
-
-                            &:hover {
-                                transform: scale(1.1, 1.2);
-                                transition: all 0.3s linear;
-                            }
-                        }
-                    }
-
-                    .slider-picture-title--factory {
-                        margin-top: 10px;
-                        margin-bottom: 20px;
-                        padding-left: 5px;
-                        span {
-                            text-transform: uppercase;
-                            font-size: 17px;
-                            font-family: inherit;
-                            color: #04003a;
-                            width: 100%; // chiều rộng bằng khối bao nó
-                            white-space: pre-wrap;
-                            overflow: hidden; // ẩn các nội dung khi kích thước lớn hơn chiều rộng khối bên ngoài
-                            text-overflow: ellipsis; //thêm 3 dấu chấm ở cuối
-                            -webkit-line-clamp: 2; // số dòng muốn hiển thị
-                            -webkit-box-orient: vertical;
-                            display: -webkit-box;
-                            font-weight: 600;
-                        }
-                        .description-slider {
-                            margin-top: 8px;
-                            div {
-                                font-size: 14px;
-                                margin: 2px 0;
-
-                                i {
-                                    font-size: 17px;
-                                    width: 30px;
-                                }
-                            }
-                            .status-active {
-                                color: #009319;
-                                font-weight: 600;
-                                i {
-                                    color: black;
-                                }
-                            }
-                            .maintenance {
-                                color: rgb(245, 27, 27);
-                            }
-                        }
-                    }
-                    .read-option {
-                        width: 100%;
-                        padding-left: 5px;
-                        .read-more-btn {
-                            width: 100%;
-                            .read-more-btn-area {
-                                display: flex;
-                                width: 114px;
-                                padding: 8px 10px;
-                                margin: 10px 0;
-                                border-bottom: 1px solid #00a7a7;
-                                border-top: 1px solid #ff0000;
-                                // border-left: 2px solid #0ccc0c;
-                                // border-right: 2px solid #0ccc0c;
-
-                                transition: all 0.1s linear;
-                                border-radius: 10px;
-                                text-align: center;
-                                .arrow-icon-readmore {
-                                    height: 18px;
-                                    width: 16px;
-                                    overflow: hidden;
-                                    i {
-                                        font-size: 18px;
-                                        opacity: 0;
-                                        transform: translateX(-16px);
-                                        transition: all 0.3s linear;
-                                    }
-                                }
-                                .content-readmore-option {
-                                    color: #eb2b44;
-                                    transform: translateX(-4px);
-                                    transition: all 0.3s linear;
-                                }
-
-                                &:hover {
-                                    .arrow-icon-readmore {
-                                        i {
-                                            opacity: 1;
-                                            transform: translateX(0px);
-                                            transition: all 0.3s linear;
-                                        }
-                                    }
-                                    .content-readmore-option {
-                                        font-weight: 600;
-                                        color: #5c9eee;
-                                        transform: translateX(6px);
-                                        transition: all 0.3s linear;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+    padding-top: 100px;
+    background-color: #fff;
 }
+.feature-title {
+    font-size: 42px;
+    font-weight: 900;
+    color: #222;
+    margin-bottom: 20px;
+}
+.feature-detail {
+    max-width: 300px;
+    color: #828bb2;
+}
+.other-feature-item {
+    padding: 50px 40px;
+    background: #f2f3f7;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.other-feature-item:hover {
+    background: #fff;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.08);
+}
+.other-feature-item:hover i {
+    color: #7c32ff;
+}
+.other-feature-item i {
+    font-size: 36px;
+    color: #222;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.other-feature-item h4 {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.other-feature-item p {
+    margin-bottom: 0;
+    color: #828bb2;
+}
+.mt--160 {
+    margin-top: -160px;
+}
+.mt--260 {
+    margin-top: -260px;
+}
+// end tính năng
+
 .slider-picture-maintenance {
     position: relative;
     cursor: default;
@@ -613,104 +400,108 @@
 
 .lecturers-outstanding {
     width: 100%;
-    padding: 45px 96px 50px;
-    background-color: #bde5f7;
     position: relative;
-
-    .wavy-2 {
-        background: url("../../assets/images/wave.png");
-        width: 100%;
-        height: 143px;
-        animation: wavy 10s linear infinite;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        &::before {
-            content: "";
-            background: url("../../assets/images/wave.png");
-            width: 100%;
-            height: 143px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            animation: wavy-reverse 10s linear infinite;
-            opacity: 0.5;
-        }
-    }
-    .container-title {
-        text-align: center;
-        .container-title1 {
-            font-size: 18px;
-            margin-bottom: 12px;
-            font-weight: 600;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #e6495e;
-        }
-        .container-title2 {
-            font-size: 32px;
-            font-weight: 600;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #3370bc;
-            text-transform: uppercase;
-        }
-        .under-line {
-            width: 70px;
-            height: 2px;
-            border-bottom: 2px solid #eb2b44;
-            margin: 10px auto 50px;
-            border-radius: 999px;
-        }
-    }
-
-    .slider-doctor {
-        .slider-doctor-picture {
-            position: relative;
-            cursor: pointer;
-            width: 278px;
-            .slider-doctor-img {
-                // background: url("https://6.viki.io/image/283303dc323f4facbfe0565a5ce2131f.jpeg?s=900x600&e=t") no-repeat;
-                background-size: cover;
-                background-position: 50% 50%;
-                height: 120px;
-                width: 120px;
-                margin: 16px auto 0;
-                border-radius: 50%;
-                box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
-            }
-            .info-doctor {
-                text-align: center;
-                font-family: "Signika", serif;
-                margin-top: 40px;
-                color: #003981;
-                line-height: 22px;
-                font-size: 1.4rem;
-            }
-            .read-option {
-                width: 100%;
-                margin: 0 auto;
-                .read-more-btn {
-                    width: 100%;
-                    div {
-                        width: 110px;
-                        padding: 10px;
-                        margin: 24px auto;
-                        border-bottom: 2px solid aqua;
-                        color: #eb2b44;
-                        transition: all 0.1s linear;
-                        border-radius: 12px;
-                        text-align: center;
-
-                        &:hover {
-                            color: #5c9eee;
-                            transition: all 0.1s linear;
-                            font-weight: 600;
-                        }
-                    }
-                }
-            }
-        }
-    }
+    padding: 157px 96px 88px;
+    background-image: url("../../../src/assets/images/banner03.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
+.row-lect-out {
+    padding-bottom: 0.5rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+}
+.title-lect-out {
+    text-align: center;
+}
+.title-lect-out h2 {
+    font-size: 44px;
+    font-weight: 600;
+}
+.title-lect-out p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.px-4 {
+    padding-left: 1.5rem !important;
+}
+.img-staff {
+    background-size: cover;
+    border-radius: 8px;
+}
+.staff {
+    width: 95% !important;
+    overflow: hidden;
+    margin: 0 12px 30px 0;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.staff .img-wrap {
+    height: 400px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    border-radius: 8px;
+}
+.staff .img {
+    width: 100%;
+    display: block;
+    background-position: top center;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.staff .text {
+    position: relative;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.staff .text h3 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 0;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.staff .text .position {
+    text-transform: uppercase;
+    color: #fd5f00;
+    display: block;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+.staff .text .faded p {
+    color: #828bb2;
+}
+.name-position {
+    transition: all 0.2s linear;
+}
+.staff:hover .name-position {
+    color: #fd5f00;
+    transition: all 0.2s linear;
+}
+.cotain-img {
+    overflow: hidden;
+}
+.staff:hover .img-staff {
+    transform: scale(1.1, 1.1);
+}
+// end giáo viên nổi bật
 @keyframes wavy {
     0% {
         background-position: 0;
@@ -798,10 +589,491 @@
 .slick-next {
     width: 50px !important;
     height: 50px !important;
+    top: 100% !important;
+    right: unset !important;
     z-index: 8;
 }
 .slick-prev:before,
 .slick-next:before {
     font-size: 48px !important;
-    color: #37b346 !important;
+    font-family: unset !important;
+    color: #ffdc5a !important;
+    transition: all 0.2s linear;
 }
+.slick-prev:hover.slick-prev:before,
+.slick-next:hover.slick-next:before {
+    color: #eeeeee !important;
+    transition: all 0.2s linear;
+}
+
+/*css 1.0*/
+// .container-area {
+//     width: 100%;
+//     background: url("../../assets/images/contain-bg-1.svg") right bottom no-repeat;
+//     background-size: 120% !important;
+//     background-color: #ecf8fe;
+//     padding: 45px 96px 50px;
+//     .container-title {
+//         text-align: center;
+//         .container-title1 {
+//             font-size: 18px;
+//             margin-bottom: 12px;
+//             margin-top: 18px;
+//             font-weight: 600;
+//             font-family: Arial, Helvetica, sans-serif;
+//             color: #e6495e;
+//         }
+//         .container-title2 {
+//             font-size: 32px;
+//             font-weight: 600;
+//             font-family: Arial, Helvetica, sans-serif;
+//             color: #3370bc;
+//             text-transform: uppercase;
+//         }
+//     }
+//     .slider-container {
+//         .space-bot-top-slider {
+//             font-family: "Ubuntu", Helvetica "Neue", Helvetica, Arial, sans-serif;
+//             .slider-picture {
+//                 position: relative;
+//                 cursor: pointer;
+//                 .slider-content-1 {
+//                     height: 372px;
+//                     border-radius: 8px;
+//                     overflow: hidden;
+//                     position: relative;
+//                     padding: 10px;
+//                     margin: 0 12px 0 0;
+//                     background-color: rgb(255, 255, 255);
+//                     box-shadow: 0 0 14px -7px #000;
+//                     .frame-slider-img {
+//                         width: 260px;
+//                         height: 145px;
+//                         border-radius: 8px;
+//                         overflow: hidden;
+//                         .slider-img {
+//                             padding-top: 56.25%;
+//                             background-size: cover;
+//                             background-position: center;
+//                             background-repeat: no-repeat;
+//                             transition: all 0.3s linear;
+
+//                             &:hover {
+//                                 transform: scale(1.1, 1.2);
+//                                 transition: all 0.3s linear;
+//                             }
+//                         }
+//                     }
+
+//                     .slider-picture-title {
+//                         margin-top: 10px;
+//                         margin-bottom: 20px;
+//                         padding-left: 5px;
+//                         span {
+//                             text-transform: uppercase;
+//                             font-size: 17px;
+//                             font-family: inherit;
+//                             color: #04003a;
+//                             width: 100%; // chiều rộng bằng khối bao nó
+//                             height: 51px;
+//                             white-space: pre-wrap;
+//                             overflow: hidden; // ẩn các nội dung khi kích thước lớn hơn chiều rộng khối bên ngoài
+//                             text-overflow: ellipsis; //thêm 3 dấu chấm ở cuối
+//                             -webkit-line-clamp: 2; // số dòng muốn hiển thị
+//                             -webkit-box-orient: vertical;
+//                             display: -webkit-box;
+//                             font-weight: 600;
+//                         }
+//                         .description-slider {
+//                             margin-top: 8px;
+//                             div {
+//                                 font-size: 14px;
+//                                 margin: 2px 0;
+
+//                                 i {
+//                                     font-size: 17px;
+//                                     width: 30px;
+//                                 }
+//                             }
+//                             .status-active {
+//                                 color: #009319;
+//                                 font-weight: 600;
+//                                 i {
+//                                     color: black;
+//                                 }
+//                             }
+//                             .maintenance {
+//                                 color: rgb(245, 27, 27);
+//                             }
+//                         }
+//                     }
+//                     .read-option {
+//                         width: 100%;
+//                         padding-left: 5px;
+//                         .read-more-btn {
+//                             width: 100%;
+//                             .read-more-btn-area {
+//                                 display: flex;
+//                                 width: 114px;
+//                                 padding: 8px 10px;
+//                                 margin: 10px 0;
+//                                 border-bottom: 1px solid #00a7a7;
+//                                 border-top: 1px solid #ff0000;
+//                                 // border-left: 2px solid #0ccc0c;
+//                                 // border-right: 2px solid #0ccc0c;
+
+//                                 transition: all 0.1s linear;
+//                                 border-radius: 10px;
+//                                 text-align: center;
+//                                 .arrow-icon-readmore {
+//                                     height: 18px;
+//                                     width: 16px;
+//                                     overflow: hidden;
+//                                     i {
+//                                         font-size: 18px;
+//                                         opacity: 0;
+//                                         transform: translateX(-16px);
+//                                         transition: all 0.3s linear;
+//                                     }
+//                                 }
+//                                 .content-readmore-option {
+//                                     color: #eb2b44;
+//                                     transform: translateX(-4px);
+//                                     transition: all 0.3s linear;
+//                                 }
+
+//                                 &:hover {
+//                                     .arrow-icon-readmore {
+//                                         i {
+//                                             opacity: 1;
+//                                             transform: translateX(0px);
+//                                             transition: all 0.3s linear;
+//                                         }
+//                                     }
+//                                     .content-readmore-option {
+//                                         font-weight: 600;
+//                                         color: #5c9eee;
+//                                         transform: translateX(6px);
+//                                         transition: all 0.3s linear;
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//             .slider-picture-maintenance {
+//                 .slider-content-1 {
+//                     .frame-slider-img {
+//                         width: 260px;
+//                         height: 145px;
+//                         border-radius: 8px;
+//                         overflow: hidden;
+//                         .slider-img {
+//                             padding-top: 56.25%;
+//                             background-image: url("../../assets/images/maintance.jpg");
+//                             background-size: cover;
+//                             background-position: center top;
+//                             background-repeat: no-repeat;
+//                             transition: all 0.3s linear;
+
+//                             &:hover {
+//                                 transform: scale(1.1, 1.2);
+//                                 transition: all 0.3s linear;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+////////////////////////////////////////////////////////////////
+
+// .container-area-3 {
+//     width: 100%;
+//     padding: 45px 96px 50px;
+//     background: url("../../assets/images/container-bg-3.svg") center bottom no-repeat;
+//     background-color: #ecf8fe;
+
+//     .container-title-3 {
+//         text-align: center;
+//         margin-top: 35px;
+//         .container-title1-3 {
+//             font-size: 18px;
+//             margin-bottom: 12px;
+//             margin-top: 18px;
+//             font-weight: 600;
+//             font-family: Arial, Helvetica, sans-serif;
+//             color: #e6495e;
+//         }
+//         .container-title2-3 {
+//             font-size: 32px;
+//             font-weight: 600;
+//             font-family: Arial, Helvetica, sans-serif;
+//             color: #3370bc;
+//             text-transform: uppercase;
+//         }
+//         .under-line {
+//             width: 70px;
+//             height: 2px;
+//             border-bottom: 2px solid #eb2b44;
+//             margin: 10px auto 50px;
+//             border-radius: 999px;
+//         }
+//     }
+//     .slider-container {
+//         .space-bot-top-slider {
+//             font-family: "Ubuntu", Helvetica "Neue", Helvetica, Arial, sans-serif;
+//             .slider-picture {
+//                 position: relative;
+//                 cursor: pointer;
+//                 .slider-img {
+//                     background: center no-repeat;
+//                     background-size: cover;
+//                     padding-top: 56.25%;
+//                     margin: 0 6px;
+//                 }
+
+//                 .slider-picture-title {
+//                     margin-top: 5px;
+//                     span {
+//                         font-size: 18px;
+//                     }
+//                 }
+//             }
+//             // outstanding factory
+//             .slider-picture--factory {
+//                 cursor: pointer;
+//                 .slider-content--factory {
+//                     // min-height: 382px;
+//                     border-radius: 8px;
+//                     overflow: hidden;
+//                     position: relative;
+//                     padding: 10px;
+//                     margin: 0 12px 0 0;
+//                     background-color: rgb(253, 252, 252);
+//                     box-shadow: 0 0 14px -7px #101010;
+//                     .frame-slider-img {
+//                         width: 260px;
+//                         height: 145px;
+//                         border-radius: 8px;
+//                         overflow: hidden;
+//                         .slider-img--factory {
+//                             background: url("../../assets/images/building.jpg");
+//                             padding-top: 56.25%;
+//                             background-size: cover;
+//                             background-position: center;
+//                             background-repeat: no-repeat;
+//                             transition: all 0.3s linear;
+
+//                             &:hover {
+//                                 transform: scale(1.1, 1.2);
+//                                 transition: all 0.3s linear;
+//                             }
+//                         }
+//                     }
+
+//                     .slider-picture-title--factory {
+//                         margin-top: 10px;
+//                         margin-bottom: 20px;
+//                         padding-left: 5px;
+//                         span {
+//                             text-transform: uppercase;
+//                             font-size: 17px;
+//                             font-family: inherit;
+//                             color: #04003a;
+//                             width: 100%; // chiều rộng bằng khối bao nó
+//                             white-space: pre-wrap;
+//                             overflow: hidden; // ẩn các nội dung khi kích thước lớn hơn chiều rộng khối bên ngoài
+//                             text-overflow: ellipsis; //thêm 3 dấu chấm ở cuối
+//                             -webkit-line-clamp: 2; // số dòng muốn hiển thị
+//                             -webkit-box-orient: vertical;
+//                             display: -webkit-box;
+//                             font-weight: 600;
+//                         }
+//                         .description-slider {
+//                             margin-top: 8px;
+//                             div {
+//                                 font-size: 14px;
+//                                 margin: 2px 0;
+
+//                                 i {
+//                                     font-size: 17px;
+//                                     width: 30px;
+//                                 }
+//                             }
+//                             .status-active {
+//                                 color: #009319;
+//                                 font-weight: 600;
+//                                 i {
+//                                     color: black;
+//                                 }
+//                             }
+//                             .maintenance {
+//                                 color: rgb(245, 27, 27);
+//                             }
+//                         }
+//                     }
+//                     .read-option {
+//                         width: 100%;
+//                         padding-left: 5px;
+//                         .read-more-btn {
+//                             width: 100%;
+//                             .read-more-btn-area {
+//                                 display: flex;
+//                                 width: 114px;
+//                                 padding: 8px 10px;
+//                                 margin: 10px 0;
+//                                 border-bottom: 1px solid #00a7a7;
+//                                 border-top: 1px solid #ff0000;
+//                                 // border-left: 2px solid #0ccc0c;
+//                                 // border-right: 2px solid #0ccc0c;
+
+//                                 transition: all 0.1s linear;
+//                                 border-radius: 10px;
+//                                 text-align: center;
+//                                 .arrow-icon-readmore {
+//                                     height: 18px;
+//                                     width: 16px;
+//                                     overflow: hidden;
+//                                     i {
+//                                         font-size: 18px;
+//                                         opacity: 0;
+//                                         transform: translateX(-16px);
+//                                         transition: all 0.3s linear;
+//                                     }
+//                                 }
+//                                 .content-readmore-option {
+//                                     color: #eb2b44;
+//                                     transform: translateX(-4px);
+//                                     transition: all 0.3s linear;
+//                                 }
+
+//                                 &:hover {
+//                                     .arrow-icon-readmore {
+//                                         i {
+//                                             opacity: 1;
+//                                             transform: translateX(0px);
+//                                             transition: all 0.3s linear;
+//                                         }
+//                                     }
+//                                     .content-readmore-option {
+//                                         font-weight: 600;
+//                                         color: #5c9eee;
+//                                         transform: translateX(6px);
+//                                         transition: all 0.3s linear;
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+////////////////////////////////////////////////////////////////////////////////
+// giáo viên nổi bật
+// .lecturers-outstanding {
+//     width: 100%;
+//     padding: 45px 96px 50px;
+//     background-color: #bde5f7;
+//     position: relative;
+
+//     .wavy-2 {
+//         background: url("../../assets/images/wave.png");
+//         width: 100%;
+//         height: 143px;
+//         animation: wavy 10s linear infinite;
+//         position: absolute;
+//         bottom: 0;
+//         left: 0;
+//         &::before {
+//             content: "";
+//             background: url("../../assets/images/wave.png");
+//             width: 100%;
+//             height: 143px;
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             animation: wavy-reverse 10s linear infinite;
+//             opacity: 0.5;
+//         }
+//     }
+//     .container-title {
+//         text-align: center;
+//         .container-title1 {
+//             font-size: 18px;
+//             margin-bottom: 12px;
+//             font-weight: 600;
+//             font-family: Arial, Helvetica, sans-serif;
+//             color: #e6495e;
+//         }
+//         .container-title2 {
+//             font-size: 32px;
+//             font-weight: 600;
+//             font-family: Arial, Helvetica, sans-serif;
+//             color: #3370bc;
+//             text-transform: uppercase;
+//         }
+//         .under-line {
+//             width: 70px;
+//             height: 2px;
+//             border-bottom: 2px solid #eb2b44;
+//             margin: 10px auto 50px;
+//             border-radius: 999px;
+//         }
+//     }
+
+//     .slider-doctor {
+//         .slider-doctor-picture {
+//             position: relative;
+//             cursor: pointer;
+//             width: 278px;
+//             .slider-doctor-img {
+//                 // background: url("https://6.viki.io/image/283303dc323f4facbfe0565a5ce2131f.jpeg?s=900x600&e=t") no-repeat;
+//                 background-size: cover;
+//                 background-position: 50% 50%;
+//                 height: 120px;
+//                 width: 120px;
+//                 margin: 16px auto 0;
+//                 border-radius: 50%;
+//                 box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+//             }
+//             .info-doctor {
+//                 text-align: center;
+//                 font-family: "Signika", serif;
+//                 margin-top: 40px;
+//                 color: #003981;
+//                 line-height: 22px;
+//                 font-size: 1.4rem;
+//             }
+//             .read-option {
+//                 width: 100%;
+//                 margin: 0 auto;
+//                 .read-more-btn {
+//                     width: 100%;
+//                     div {
+//                         width: 110px;
+//                         padding: 10px;
+//                         margin: 24px auto;
+//                         border-bottom: 2px solid aqua;
+//                         color: #eb2b44;
+//                         transition: all 0.1s linear;
+//                         border-radius: 12px;
+//                         text-align: center;
+
+//                         &:hover {
+//                             color: #5c9eee;
+//                             transition: all 0.1s linear;
+//                             font-weight: 600;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
