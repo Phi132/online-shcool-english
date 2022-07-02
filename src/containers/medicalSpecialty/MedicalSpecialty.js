@@ -16,6 +16,7 @@ import Appointment from '../doctor/schedules/Appointment';
 import LoadingOverlay from 'react-loading-overlay';
 import Loading from '../doctor/schedules/Loading';
 import HeaderSecondClient from '../Header/HeaderSecondClient';
+import ScrollTop from '../homepage/ScrollTop';
 
 
 
@@ -104,6 +105,7 @@ class MedicalSpecialty extends Component {
                     spinner={<Loading />}
 
                 >
+                    <ScrollTop />
                     <HeaderSecondClient />
                     {/* describe specialty */}
                     <div className="description-top" style={{ backgroundImage: `url('${imageSpecialtyURL}')` }}>

@@ -14,6 +14,7 @@ import LoadingOverlay from 'react-loading-overlay';
 import Loading from './schedules/Loading';
 import Footer from '../homepage/Footer';
 import HeaderSecondClient from '../Header/HeaderSecondClient';
+import ScrollTop from '../homepage/ScrollTop';
 
 class DoctorDetail extends Component {
 
@@ -63,7 +64,7 @@ class DoctorDetail extends Component {
                     spinner={<Loading />}
 
                 >
-
+                    <ScrollTop />
                     <HeaderSecondClient />
                     <div className="container-doctor-detail">
                         <DoctorInfo

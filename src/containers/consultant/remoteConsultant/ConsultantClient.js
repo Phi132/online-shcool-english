@@ -23,6 +23,7 @@ import Peer from 'simple-peer';
 import PhoneRinging from '../../../assets/audio/PhoneRinging.mp3';
 import ScrollToBottom from 'react-scroll-to-bottom';
 import HeaderSecondClient from '../../Header/HeaderSecondClient';
+import ScrollTop from '../../homepage/ScrollTop';
 
 
 const socket = io(process.env.REACT_APP_BACKEND_URL);
@@ -503,6 +504,7 @@ class ConsultantClient extends Component {
                         spinner={<Loading />}
 
                     >
+                        <ScrollTop />
                         <HeaderSecondClient />
                         {/* describe specialty */}
                         <div className="description-top" style={{ backgroundImage: `url('${imageSpecialtyURL}')` }}>
