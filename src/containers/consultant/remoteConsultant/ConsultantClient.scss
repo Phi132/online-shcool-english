@@ -253,7 +253,7 @@
 .call-remote-consultant {
     position: relative;
     margin-top: 30px;
-    background-color: #d8e9f5;
+    background-color: #e2eaf0;
     box-shadow: 0 0 26px -7px black;
     box-sizing: border-box;
     padding: 20px;
@@ -261,15 +261,14 @@
     justify-content: space-between;
 
     .camera-video {
-        width: 200px;
-        height: 150px;
-        border: 1px solid rgba(241, 172, 172, 0.9);
-        border-radius: 8px;
+        width: 150px;
+        height: 110px;
+        border: 2px solid rgba(241, 241, 241, 1);
+        border-radius: 6px;
         transform-origin: top right;
-        margin-left: 6px;
         position: absolute;
-        top: 27px;
-        right: 311px;
+        top: 78px;
+        right: 320px;
         z-index: 100;
         transform-origin: top right;
         overflow: hidden;
@@ -291,20 +290,26 @@
     // your friend bideo
     .your-friend-call-video {
         width: 1024px;
-        height: 600px;
+        height: 630px;
 
         .your-friend-calling {
-            height: 520px;
-            background-color: rgba(0, 0, 0, 0.8);
+            height: 615px;
             border-radius: 12px;
             padding: 4px;
             .your-friend-name {
                 font-size: 24px;
                 font-weight: 600;
-                color: #e6fef0;
+                color: #46d3cc;
+                margin-bottom: 20px;
+
+                span {
+                    padding: 5px;
+                    border-radius: 8px;
+                    background-color: #e6f8fb;
+                }
             }
             .video-call {
-                height: 92%;
+                height: 91%;
                 width: 96%;
             }
             .video-call-muted::-webkit-media-controls-panel {
@@ -337,6 +342,9 @@
             }
         }
         .nav-controll-call-video {
+            position: absolute;
+            bottom: 37px;
+            left: -155px;
             width: 100%;
             padding-top: 10px;
             .controll-call-list {
@@ -375,11 +383,13 @@
     .chat-box-area {
         background-color: #ffffff;
         width: 272px;
-        height: 520px;
-        padding: 15px 10px;
+        height: 500px;
+        padding: 15px 10px 0;
+        margin-top: 100px;
         border-radius: 12px;
         display: flex;
         flex-direction: column;
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
         .title-chat-box {
             height: 40px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.9);
@@ -390,12 +400,10 @@
             }
         }
         .chat-content {
-            height: 380px;
+            height: 83%;
             padding-top: 10px;
-            
             display: flex;
             flex-direction: column;
-            
 
             .scroll-text-bottom {
                 height: 100%;
@@ -462,14 +470,15 @@
                         max-width: 71%;
                         margin-right: 10px;
                         overflow-wrap: break-word;
-                        .my-mess{
+                        .my-mess {
                             width: 100%;
                             background-color: #27e7da;
                             border-radius: 8px;
                             padding: 6px;
                         }
-                        .time-my-mess{
-                            padding-left: 75%;
+                        .time-my-mess {
+                            display: flex;
+                            justify-content: flex-end;
                             font-size: 12px;
                             color: #000000;
                         }

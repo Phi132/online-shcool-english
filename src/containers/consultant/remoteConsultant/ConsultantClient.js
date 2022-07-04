@@ -603,6 +603,7 @@ class ConsultantClient extends Component {
                                     isOpenCamera ? 'Tắt Camera' : 'Mở Camera'
                                 }
                             </button>
+
                             {
                                 call.isRecievedCall && !callEnded && isCalling && (
                                     <div className='anwsering-btn'>
@@ -673,7 +674,9 @@ class ConsultantClient extends Component {
                                     (
                                         <div className='your-friend-calling' id={idYourFriend}>
                                             <div className="your-friend-name">
-                                                Đang Gọi : {call.name ? call.name : nameFrom}
+                                                <span>
+                                                    Đang Gọi : {call.name ? call.name : nameFrom}
+                                                </span>
                                             </div>
 
                                             <video className='video-call' ref={this.myVideo} autoPlay
