@@ -1,6 +1,6 @@
 import axios from "axios";
 const getDetailAppointment = (date, id) => {
-    return axios.get(`https://booking-doctor-first-server.herokuapp.com/api/get-appointment-doctor?date=${date}&id=${id}`)
+    return axios.get(process.env.REACT_APP_BACKEND_URL + `/api/get-appointment-doctor?date=${date}&id=${id}`)
 }
 
 

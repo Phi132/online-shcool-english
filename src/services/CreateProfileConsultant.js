@@ -1,6 +1,6 @@
 import axios from "axios";
 const CreateProfileConsultant = (data) => {
-    return axios.post('https://booking-doctor-first-server.herokuapp.com/api/create-profile-consultant', data)
+    return axios.post(process.env.REACT_APP_BACKEND_URL + '/api/create-profile-consultant', data)
 }
 
 

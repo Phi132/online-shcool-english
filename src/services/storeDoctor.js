@@ -1,6 +1,6 @@
 import axios from "axios";
 const storeDoctor = (data) => {
-    return axios.put('https://booking-doctor-first-server.herokuapp.com/api/store-info-doctor', data)
+    return axios.put(process.env.REACT_APP_BACKEND_URL + '/api/store-info-doctor', data)
 }
 
 

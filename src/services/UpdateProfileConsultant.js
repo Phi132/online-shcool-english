@@ -1,6 +1,6 @@
 import axios from "axios";
 const UpdateProfileConsultant = (data) => {
-    return axios.put('https://booking-doctor-first-server.herokuapp.com/api/update-profile-consultant', data)
+    return axios.put(process.env.REACT_APP_BACKEND_URL + '/api/update-profile-consultant', data)
 }
 
 

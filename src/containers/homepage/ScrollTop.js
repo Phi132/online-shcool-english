@@ -34,7 +34,7 @@ class ScrollTop extends Component {
             <div className='backToTop' ref={this.arrow}
                 onClick={this.backToTop}
             >
-                <i class="fas fa-angle-up"></i>
+                <i className="fas fa-angle-up"></i>
             </div>
         )
 

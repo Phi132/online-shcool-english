@@ -21,6 +21,7 @@ import { connect } from 'react-redux';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { withRouter } from 'react-router';
+import playButtomImg from "../../assets/images/play-button-icon-png-18931.png";
 
 
 class Container extends Component {
@@ -880,7 +881,7 @@ class Container extends Component {
                                                             <img className="img-fluid img-consultant" src="https://www.studytienganh.vn/upload/2021/05/98707.jpg" />
                                                             <div className="overlay"></div>
                                                             <span className="popup-youtube play-btn">
-                                                                <img className="play-icon" src="https://preview.colorlib.com/theme/eclipse/img/xplay-btn.png.pagespeed.ic.0u0c3c4gC2.webp" />
+                                                                <img className="play-icon" src={playButtomImg} />
                                                             </span>
                                                         </div>
                                                         <h4 className="text-white name-consultant">{e.name}</h4>

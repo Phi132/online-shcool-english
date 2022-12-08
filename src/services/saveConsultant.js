@@ -1,6 +1,6 @@
 import axios from "axios";
 const saveConsultant = (data) => {
-    return axios.post('https://booking-doctor-first-server.herokuapp.com/api/post-save-remote-consultant', data)
+    return axios.post(process.env.REACT_APP_BACKEND_URL + '/api/post-save-remote-consultant', data)
 }
 
 

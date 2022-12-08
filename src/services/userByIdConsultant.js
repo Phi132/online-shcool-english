@@ -1,7 +1,7 @@
 import axios from 'axios';
 const userByIdConsultant = (id) => {
 
-    return axios.get(`https://booking-doctor-first-server.herokuapp.com/api/get-user-by-id-consultant?consultantId=${id}`)
+    return axios.get(process.env.REACT_APP_BACKEND_URL + `/api/get-user-by-id-consultant?consultantId=${id}`)
 
 }
 

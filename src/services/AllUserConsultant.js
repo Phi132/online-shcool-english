@@ -1,6 +1,6 @@
 import axios from "axios";
 const AllUserConsultant = () => {
-    return axios.get('https://booking-doctor-first-server.herokuapp.com/api/get-all-consultant');
+    return axios.get(process.env.REACT_APP_BACKEND_URL + '/api/get-all-consultant');
 }
 
 
