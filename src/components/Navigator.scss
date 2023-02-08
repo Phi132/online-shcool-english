@@ -2,6 +2,7 @@
 
 .navigator-menu {
     margin-top: 90px;
+    flex-direction: column;
     &.list-unstyled,
     .list-unstyled {
         list-style-type: none;
@@ -27,7 +28,6 @@
         .menu-group-name {
             line-height: 40px;
             padding: 0 15px;
-            
         }
         .menu-list {
             display: block;
