@@ -50,7 +50,7 @@ class PatientLogin extends Component {
             else {
                 processLogout();
                 patientLoginSuccess(server.data.checkLoginUserHomea);
-                
+
                 //this.props.patientLoginSuccess(server.user)
                 //console.log(server.data.userData);
             }
@@ -91,7 +91,7 @@ class PatientLogin extends Component {
                             <div className="input-user-pass">
                                 <div className="user-name">
                                     <div className="user-name-title">
-                                        <label>Username</label>
+                                        <label>Username: <b >"user1"</b></label>
                                     </div>
 
                                     <input className="input_user"
@@ -108,7 +108,7 @@ class PatientLogin extends Component {
                                 <div className="password">
 
                                     <div className="password-title">
-                                        <label>Password</label>
+                                        <label>Password: <b >"abc123"</b></label>
                                     </div>
                                     <div className="input_pass_container">
                                         <input className="input_pass"
@@ -159,8 +159,8 @@ class PatientLogin extends Component {
 
                     </form>
 
-                </div>
-            </div>
+                </div >
+            </div >
         )
     }
 }
